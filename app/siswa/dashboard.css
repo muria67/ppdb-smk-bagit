@@ -1,0 +1,423 @@
+@import url("https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap");
+
+/* =====================================================
+   DASHBOARD CALON SISWA  (prefix .sd-)
+   ===================================================== */
+.sd-page {
+  display: grid;
+  grid-template-columns: 250px 1fr;
+  min-height: 100vh;
+  background: #fff;
+  color: #1b2a5c;
+  font-family: "Poppins", system-ui, sans-serif;
+}
+
+/* ----- sidebar ----- */
+.sd-side {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  padding: 44px 18px 28px 40px;
+  background: linear-gradient(180deg, #5aa3c9 0%, #4b94bd 100%);
+  color: #fff;
+  overflow: hidden;
+}
+.sd-side-wave {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 56px;
+  height: 100%;
+}
+.sd-brand,
+.sd-nav,
+.sd-side > .sd-logout {
+  position: relative;
+  z-index: 1;
+}
+.sd-brand h2 {
+  font-family: "Fredoka", "Poppins", sans-serif;
+  font-size: 34px;
+  font-weight: 600;
+  line-height: 1.1;
+}
+.sd-brand p {
+  margin-top: 10px;
+  font-family: "Fredoka", "Poppins", sans-serif;
+  font-size: 15px;
+  font-weight: 500;
+  line-height: 1.5;
+}
+.sd-nav {
+  margin-top: 28px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+.sd-nav-item {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  padding: 11px 14px;
+  border: none;
+  border-radius: 6px;
+  background: transparent;
+  color: #fff;
+  font-family: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+  transition: background 0.15s ease;
+}
+.sd-nav-item:hover {
+  background: rgba(255, 255, 255, 0.14);
+}
+.sd-nav-item.active {
+  background: #3b84ad;
+}
+.sd-side > .sd-logout {
+  margin-top: auto;
+}
+
+/* ----- konten ----- */
+.sd-main {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 22px 28px 32px;
+  background: #fff;
+  min-width: 0;
+}
+.sd-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+}
+.sd-search {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: min(100%, 520px);
+  height: 44px;
+  padding: 0 16px;
+  border: 1.5px solid #111;
+  border-radius: 6px;
+  background: #fff;
+  color: #111;
+}
+.sd-search input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  outline: none;
+  background: transparent;
+  font-family: inherit;
+  font-size: 13px;
+}
+.sd-search:focus-within {
+  border-color: #3b7bff;
+  box-shadow: 0 0 0 3px rgba(59, 123, 255, 0.18);
+}
+.sd-user {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  white-space: nowrap;
+}
+.sd-user strong {
+  display: block;
+  font-size: 13px;
+  font-weight: 700;
+  color: #111;
+}
+.sd-user small {
+  display: block;
+  font-size: 11px;
+  color: #444;
+}
+.sd-avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #4b94bd;
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+/* ----- banner ----- */
+.sd-banner {
+  position: relative;
+  overflow: hidden;
+  min-height: 82px;
+  padding: 14px 24px;
+  border-radius: 6px;
+  background: linear-gradient(90deg, #d9eefb 0%, #e8f5fd 60%, #dcedfa 100%);
+}
+.sd-banner-text {
+  position: relative;
+  z-index: 1;
+}
+.sd-banner h1 {
+  font-size: 24px;
+  font-weight: 700;
+  color: #3f5f8f;
+  line-height: 1.2;
+}
+.sd-banner-text p {
+  margin-top: 2px;
+  font-size: 11px;
+  color: #34425e;
+}
+.sd-banner-art {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  height: 100%;
+  width: auto;
+  max-width: 55%;
+}
+.sd-slogan {
+  position: absolute;
+  right: 34px;
+  top: 12px;
+  font-family: "Caveat", cursive;
+  font-size: 17px;
+  font-weight: 600;
+  line-height: 1.2;
+  color: #2f6fe0;
+  text-align: center;
+  transform: rotate(-6deg);
+}
+
+/* ----- status pendaftaran ----- */
+.sd-status {
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 18px 26px;
+  border: 1px solid #cfe5f6;
+  border-radius: 14px;
+  background: #e6f3fd;
+}
+.sd-status-icon {
+  flex-shrink: 0;
+  width: 50px;
+  height: 50px;
+  display: grid;
+  place-items: center;
+  border: 1px solid #b9dcf3;
+  border-radius: 10px;
+  background: #d6ecfb;
+  color: #1f56c6;
+}
+.sd-status-info {
+  flex: 1 1 230px;
+  min-width: 200px;
+}
+.sd-status-info h2 {
+  font-size: 17px;
+  font-weight: 700;
+  color: #3f5f8f;
+}
+.sd-active {
+  display: inline-block;
+  margin: 6px 0 8px;
+  padding: 2px 14px;
+  border-radius: 4px;
+  background: #7cf08a;
+  color: #17803a;
+  font-size: 13px;
+  font-weight: 600;
+}
+.sd-status-info p {
+  font-size: 10.5px;
+  line-height: 1.6;
+  color: #66748f;
+}
+.sd-steps {
+  flex: 2 1 360px;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 0;
+}
+.sd-step {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+.sd-step::before {
+  /* garis penghubung ke langkah berikutnya */
+  content: "";
+  position: absolute;
+  top: 14px;
+  left: 50%;
+  width: 100%;
+  height: 2px;
+  background: #2b7be8;
+}
+.sd-step.done::before {
+  background: #5ee06a;
+}
+.sd-step:last-child::before {
+  display: none;
+}
+.sd-step-dot {
+  position: relative;
+  z-index: 1;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  background: #1a73e8;
+  color: #fff;
+  font-size: 13px;
+  font-weight: 700;
+}
+.sd-step.done .sd-step-dot {
+  background: #5ee06a;
+}
+.sd-step strong {
+  margin-top: 6px;
+  font-size: 11px;
+  font-weight: 700;
+  color: #34425e;
+}
+.sd-step small {
+  font-size: 10px;
+  color: #1a8cf0;
+}
+.sd-step.done small {
+  color: #1fae45;
+}
+
+/* ----- kartu menu ----- */
+.sd-cards {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  padding: 20px;
+  border: 1px solid #cfe5f6;
+  border-radius: 14px;
+  background: #e0f1fc;
+}
+.sd-card {
+  display: flex;
+  flex-direction: column;
+  padding: 14px 14px 12px;
+  border-radius: 8px;
+  background: #fff;
+  box-shadow: 0 2px 8px rgba(30, 60, 120, 0.06);
+}
+.sd-card-icon {
+  width: 30px;
+  height: 30px;
+  display: grid;
+  place-items: center;
+  border-radius: 6px;
+  background: #eef2fb;
+}
+.sd-card h3 {
+  margin-top: 16px;
+  font-size: 13px;
+  font-weight: 700;
+  color: #1b2a5c;
+}
+.sd-card p {
+  margin-top: 4px;
+  font-size: 10px;
+  color: #8792a8;
+}
+.sd-card-foot {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 18px;
+}
+.sd-tag {
+  padding: 2px 8px;
+  border-radius: 999px;
+  font-size: 9px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+.sd-tag.muted {
+  background: #e6ebf6;
+  color: #5b6f95;
+}
+.sd-tag.pink {
+  background: #fde3ea;
+  color: #d0436a;
+}
+.sd-tag.green {
+  background: #d9f6e4;
+  color: #1f9e55;
+}
+.sd-tag.blue {
+  background: #e3ecfc;
+  color: #2f5fd0;
+}
+.sd-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  border-radius: 6px;
+  background: #3f70e4;
+  color: #fff;
+  font-size: 11px;
+  font-weight: 600;
+  white-space: nowrap;
+  transition: background 0.15s ease, transform 0.15s ease;
+}
+.sd-btn:hover {
+  background: #2f5ed0;
+  transform: translateY(-1px);
+}
+
+@media (max-width: 900px) {
+  .sd-page {
+    grid-template-columns: 1fr;
+  }
+  .sd-side {
+    padding: 28px 20px 20px 36px;
+  }
+  .sd-nav {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+  .sd-side > .sd-logout {
+    margin-top: 12px;
+  }
+  .sd-main {
+    padding: 18px 16px 28px;
+  }
+  .sd-top {
+    flex-wrap: wrap;
+  }
+  .sd-status {
+    flex-wrap: wrap;
+  }
+  .sd-steps {
+    flex-basis: 100%;
+  }
+}
+
+@media (max-width: 560px) {
+  .sd-cards {
+    grid-template-columns: 1fr;
+  }
+  .sd-slogan {
+    display: none;
+  }
+}
